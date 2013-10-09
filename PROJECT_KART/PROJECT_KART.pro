@@ -14,10 +14,18 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    about.cpp
+    about.cpp \
+    player.cpp \
+    item.cpp \
+    enemy.cpp \
+    inventory.cpp
 
 HEADERS  += mainwindow.h \
-    about.h
+    about.h \
+    player.h \
+    item.h \
+    enemy.h \
+    inventory.h
 
 FORMS    += mainwindow.ui \
     about.ui
