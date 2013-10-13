@@ -43,7 +43,7 @@ public:
         plainTextEdit = new QPlainTextEdit(About);
         plainTextEdit->setObjectName(QStringLiteral("plainTextEdit"));
         plainTextEdit->setEnabled(false);
-        plainTextEdit->setGeometry(QRect(120, 180, 261, 161));
+        plainTextEdit->setGeometry(QRect(60, 90, 321, 251));
         horizontalScrollBar = new QScrollBar(About);
         horizontalScrollBar->setObjectName(QStringLiteral("horizontalScrollBar"));
         horizontalScrollBar->setGeometry(QRect(10, 10, 381, 16));
