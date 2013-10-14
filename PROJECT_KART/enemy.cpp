@@ -35,9 +35,11 @@
 
     Enemy::~Enemy()
     {
-        delete(name) ;
-        delete hitPoints ;
-        delete armour ;
-        delete power ;
-        delete this ;
+        //delete(name) ;
+        //delete hitPoints ;
+        //delete armour ;
+        //delete power ;
+        //delete this ;
+		//we dont do this, its local variables, they will get destroyed normally. c++ is not thaaaaat much of "you have to do everything"
+		//desstructor would only be needed when we load pictures, because it would be a pointer to a allocated memory. that memmory that needs to be free only. (and other places that have "new")
     }
