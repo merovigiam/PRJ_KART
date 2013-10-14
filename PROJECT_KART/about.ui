@@ -19,10 +19,10 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>90</y>
-     <width>321</width>
-     <height>251</height>
+     <x>120</x>
+     <y>180</y>
+     <width>261</width>
+     <height>161</height>
     </rect>
    </property>
    <property name="plainText">
