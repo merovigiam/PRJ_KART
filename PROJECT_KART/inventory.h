@@ -13,6 +13,27 @@ private:
 public:
     Inventory();
 
+    inline void addItem(Item &item) {
+        inv.push_back(item);
+    }
+
+    inline void addItem(Item *item) {
+        inv.push_back(*item);
+        delete item;
+    }
+
+    inline const vector<Item> getInventoryListArray() {
+        return inv;
+    }
+
+    string getInventoryList();
+
+    Item getItemAt(int index);
+
+    Item removeItem(int index);
+
+
+
 };
 
 #endif // INVENTORY_H
