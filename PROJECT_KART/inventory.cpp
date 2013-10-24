@@ -2,7 +2,6 @@
 
 Inventory::Inventory()
 {
-    inv = vector<Item>(10) ;
 }
 
 string Inventory::getInventoryList(){

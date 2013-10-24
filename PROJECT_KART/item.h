@@ -17,7 +17,7 @@ private:
     static int idCounter;
 public:
 
-    Item() ;
+
     Item (string description, int inWeight, float inValue, bool edible);
     Item (string description);
 
