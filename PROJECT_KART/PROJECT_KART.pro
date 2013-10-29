@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2013-10-09T09:16:13
+# Project created by QtCreator 2013-10-20T14:57:30
 #
 #-------------------------------------------------
 
@@ -14,18 +14,22 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    about.cpp \
     player.cpp \
     item.cpp \
+    inventory.cpp \
     enemy.cpp \
-    inventory.cpp
+    about.cpp \
+    food.cpp \
+    weapon.cpp
 
 HEADERS  += mainwindow.h \
-    about.h \
     player.h \
     item.h \
+    inventory.h \
     enemy.h \
-    inventory.h
+    about.h \
+    food.h \
+    weapon.h
 
 FORMS    += mainwindow.ui \
     about.ui

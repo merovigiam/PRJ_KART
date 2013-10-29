@@ -11,14 +11,12 @@ private:
     int id;
     string longDescription;
     int weightGrams;
-    bool edible;
     float value;
-    bool weaponCheck;
     static int idCounter;
 public:
 
     Item() ;
-    Item (string description, int inWeight, float inValue, bool edible);
+    Item (string description, int inWeight, float inValue);
     Item (string description);
 
     inline int getIdCounter() {
@@ -61,10 +59,6 @@ public:
 
     //int getWeaponCheck();
     //void setWeaponCheck(int weaponCheck);
-
-    inline bool getEdible() {
-        return this->edible;
-    }
 
 };
 
