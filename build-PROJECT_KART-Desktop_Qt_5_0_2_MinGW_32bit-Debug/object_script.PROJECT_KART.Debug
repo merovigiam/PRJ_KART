@@ -1,0 +1,13 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\player.o
+./debug\item.o
+./debug\inventory.o
+./debug\enemy.o
+./debug\about.o
+./debug\food.o
+./debug\weapon.o
+./debug\moc_mainwindow.o
+./debug\moc_about.o
+);

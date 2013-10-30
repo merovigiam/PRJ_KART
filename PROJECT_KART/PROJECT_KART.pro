@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     enemy.cpp \
     about.cpp \
     food.cpp \
-    weapon.cpp
+    weapon.cpp \
+    gameprogress.cpp
 
 HEADERS  += mainwindow.h \
     player.h \
@@ -29,7 +30,8 @@ HEADERS  += mainwindow.h \
     enemy.h \
     about.h \
     food.h \
-    weapon.h
+    weapon.h \
+    gameprogress.h
 
 FORMS    += mainwindow.ui \
     about.ui
