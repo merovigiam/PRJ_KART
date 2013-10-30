@@ -17,9 +17,10 @@ private:
 public:
     Player(string name, int hitPoints = 300, int foodLevel = 100, int armour = 50, int power = 30) ;
 
-    void attack(Enemy *target) ;
-    void eat(Food *food) ;
-    void equip(Weapon *weapon, bool isMain) ;
+    void attack(Enemy target) ;
+    void eat(Food food) ;
+    void equip(Weapon weapon, bool isMain) ; //the characteristic that if a weapon is at the main hand should be at the layer, not inside the weapon.
+
 };
 
 #endif // PLAYER_H

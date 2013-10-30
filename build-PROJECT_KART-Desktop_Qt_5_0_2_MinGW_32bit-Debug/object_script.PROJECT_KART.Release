@@ -8,6 +8,9 @@ INPUT(
 ./release\about.o
 ./release\food.o
 ./release\weapon.o
+./release\gameprogress.o
+./release\testfolder.o
 ./release\moc_mainwindow.o
 ./release\moc_about.o
+./release\moc_testfolder.o
 );

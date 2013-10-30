@@ -22,9 +22,18 @@ private:
 
 	/**********************************************************************************************//**
 	 * \brief	This variable will keep track of the game progress. This variabl should go from 0 to 100?
+	 * 			
+	 *	start of the game: 0
+	 *	get key to door: 5
+	 *	get out of the woods: 10
+	 *	get what?
+	 *
+	 *	game finished: 100
+	 *
+	 *
 	 **************************************************************************************************/
 
-	int stage;
+	static int stage;
 
 public:
 

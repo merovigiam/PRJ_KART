@@ -11,16 +11,16 @@ Player::Player(string name, int hitPoints, int foodLevel, int armour, int power)
     this->power = power ;
 }
 
-void Player::eat(Food *food)
+void Player::eat(Food food)
 {
-    this->foodLevel += food->getFoodValue() ;
+    this->foodLevel += food.getFoodValue() ;
 }
 
-void Player::equip(Weapon *weapon, bool isMain)
+void Player::equip(Weapon weapon, bool isMain)
 {
     if(isMain == true) {
-        this->weaponMain = *weapon ;
+        this->weaponMain = weapon ;
     } else {
-        this->weaponOff = *weapon ;
+        this->weaponOff = weapon ;
     }
 }

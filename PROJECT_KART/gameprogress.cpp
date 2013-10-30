@@ -22,3 +22,5 @@ void GameProgress::add(int amount)
 {
     stage += amount;
 }
+
+int GameProgress::stage = 0;

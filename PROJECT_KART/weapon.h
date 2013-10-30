@@ -6,14 +6,18 @@ class Weapon : public Item
 {
 public:
     Weapon() ;
-    Weapon(int power, int magicPower, bool isMainHand);
-    int getPower() ;
-    int getMagicPower() ;
-    bool isMainHand() ;
+    Weapon(int power, int magicPower);
+    inline int getPower() {
+        return power;
+    }
+
+    inline int getMagicPower() {
+        return magicPower;
+    }
+
 
 private:
     int power, magicPower ;
-    bool mainHand ;
 
 };
 

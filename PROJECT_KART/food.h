@@ -7,6 +7,7 @@ class Food : public Item
 public:
     Food(int foodValue = 0);
     int getFoodValue() ;
+    void setFoodValue(int value);
 
 private:
     int foodValue ;

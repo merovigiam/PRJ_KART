@@ -9,3 +9,7 @@ int Food::getFoodValue()
 {
     return this->foodValue ;
 }
+
+void Food::setFoodValue(int value) {
+    foodValue = value;
+}
