@@ -10,6 +10,7 @@ INPUT(
 ./debug\weapon.o
 ./debug\gameprogress.o
 ./debug\testfolder.o
+./debug\g.o
 ./debug\moc_mainwindow.o
 ./debug\moc_about.o
 ./debug\moc_testfolder.o

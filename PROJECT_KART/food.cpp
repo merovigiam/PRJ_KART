@@ -1,15 +1,12 @@
 #include "food.h"
 
-Food::Food(int foodValue)
+Food::Food(string description, int weight, int foodValue) : Item(description)
 {
     this->foodValue = foodValue ;
 }
 
-int Food::getFoodValue()
-{
-    return this->foodValue ;
-}
 
 void Food::setFoodValue(int value) {
-    foodValue = value;
+    if(value > 0)
+        foodValue = value;
 }
