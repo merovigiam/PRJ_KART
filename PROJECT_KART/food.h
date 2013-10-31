@@ -5,9 +5,16 @@
 class Food : public Item
 {
 public:
-    Food(int foodValue = 0);
-    int getFoodValue() ;
+    Food(string description, int foodValue = 0);
+    inline int getFoodValue() {
+        return foodValue;
+    }
+
     void setFoodValue(int value);
+
+    inline string getType() {
+        return "food";
+    }
 
 private:
     int foodValue ;

@@ -19,6 +19,10 @@ public:
     Item (string description, int inWeight, float inValue);
     Item (string description);
 
+    inline string getType() {
+        return "item";
+    }
+
     inline int getIdCounter() {
         idCounter++;
         return idCounter;

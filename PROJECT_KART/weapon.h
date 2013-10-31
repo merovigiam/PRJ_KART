@@ -5,8 +5,8 @@
 class Weapon : public Item
 {
 public:
-    Weapon() ;
-    Weapon(int power, int magicPower);
+    Weapon(string description) ;
+    Weapon(string description, int power, int magicPower, bool isMain) ;
     inline int getPower() {
         return power;
     }
@@ -15,9 +15,13 @@ public:
         return magicPower;
     }
 
+    inline string getType() {
+        return "weapon";
+    }
 
 private:
     int power, magicPower ;
+    bool isMain;
 
 };
 
