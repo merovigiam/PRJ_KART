@@ -1,11 +1,14 @@
 #ifndef FOOD_H
 #define FOOD_H
 #include "item.h"
+#include <string>
 
+using namespace std;
 class Food : public Item
 {
 public:
-    Food(string description, int foodValue = 0);
+    Food(string description, int weight, int foodValue);
+
     inline int getFoodValue() {
         return foodValue;
     }

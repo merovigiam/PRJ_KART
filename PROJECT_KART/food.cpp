@@ -2,6 +2,7 @@
 
 Food::Food(string description, int weight, int foodValue) : Item(description)
 {
+    this->weightGrams = weight;
     this->foodValue = foodValue ;
 }
 

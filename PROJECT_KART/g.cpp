@@ -4,7 +4,7 @@ G::G()
 {
 }
 
-void G::messageDialog(string title, string text, QWidget* form) {
+static void G::messageDialog(string title, string text, QWidget* form) {
     QMessageBox *msgBox = new QMessageBox(form);
     msgBox->setText(title);
     msgBox->setWindowModality(Qt::NonModal);
@@ -15,11 +15,11 @@ void G::messageDialog(string title, string text, QWidget* form) {
     int ret = msgBox->exec();
 }
 
-static bool askYesNo(string title, string message, QWidget* form){
+static bool G::askYesNo(string title, string message, QWidget* form){
     QMessageBox *msgBox = new QMessageBox(form);
     msgBox->setText(title);
     msgBox->setWindowModality(Qt::NonModal);
-    msgBox->setInformativeText(text);
+    msgBox->setInformativeText(message);
     msgBox->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
     msgBox->setStandardButtons(QMessageBox::Ok);
     msgBox->setDefaultButton(QMessageBox::Ok);

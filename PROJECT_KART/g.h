@@ -17,8 +17,10 @@ using namespace std;
 
 class G
 {
-public:
+private:
     G();
+public:
+
 
     /**********************************************************************************************//**
      * \fn	static void G::messageDialog(string title, string message, QWidget* form);

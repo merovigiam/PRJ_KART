@@ -6,7 +6,7 @@ using namespace std;
 
 class Item
 {
-private:
+protected:
     string description;
     int id;
     string longDescription;
