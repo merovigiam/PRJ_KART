@@ -56,10 +56,13 @@ void Player::equip(Item* weapon, bool isMain)
         }
     }
     else {
-        G::messageDialog("Problem","You can not equip "+ weapon->getDescription(),NULL);
+
 
     }
 }
+
+
+
 
 Player::~Player(){
     if(inv != NULL) {
