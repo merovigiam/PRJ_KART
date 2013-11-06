@@ -2,6 +2,9 @@
 #define STARTWINDOW_H
 
 #include <QDialog>
+#include "rooms/begin_room.h"
+#include "about.h"
+#include "mainwindow.h"
 
 namespace Ui {
 class startWindow;

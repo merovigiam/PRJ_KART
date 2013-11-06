@@ -23,6 +23,8 @@ SOURCES += main.cpp\
     weapon.cpp \
     gameprogress.cpp \
     rooms/testfolder.cpp \
+    newmainwindow.cpp \
+    rooms/begin_room.cpp \
     startwindow.cpp
 
 HEADERS  += mainwindow.h \
@@ -35,9 +37,13 @@ HEADERS  += mainwindow.h \
     weapon.h \
     gameprogress.h \
     rooms/testfolder.h \
-    startwindow.h
+    startwindow.h \
+    newmainwindow.h \
+    rooms/begin_room.h
 
 FORMS    += mainwindow.ui \
     about.ui \
     rooms/testfolder.ui \
-    startwindow.ui
+    startwindow.ui \
+    newmainwindow.ui \
+    rooms/begin_room.ui
