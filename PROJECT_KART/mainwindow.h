@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include<about.h>
+#include <about.h>
 
 
 namespace Ui {

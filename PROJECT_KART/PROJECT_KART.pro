@@ -22,7 +22,8 @@ SOURCES += main.cpp\
     food.cpp \
     weapon.cpp \
     gameprogress.cpp \
-    rooms/testfolder.cpp
+    rooms/testfolder.cpp \
+    startwindow.cpp
 
 HEADERS  += mainwindow.h \
     player.h \
@@ -33,8 +34,10 @@ HEADERS  += mainwindow.h \
     food.h \
     weapon.h \
     gameprogress.h \
-    rooms/testfolder.h
+    rooms/testfolder.h \
+    startwindow.h
 
 FORMS    += mainwindow.ui \
     about.ui \
-    rooms/testfolder.ui
+    rooms/testfolder.ui \
+    startwindow.ui
