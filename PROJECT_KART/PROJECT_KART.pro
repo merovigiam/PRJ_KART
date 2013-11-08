@@ -22,14 +22,9 @@ SOURCES += main.cpp\
     food.cpp \
     weapon.cpp \
     gameprogress.cpp \
-    rooms/testfolder.cpp \
     newmainwindow.cpp \
     rooms/begin_room.cpp \
-    startwindow.cpp \
-    rooms/r_fo_c.cpp \
-    rooms/r_fo_d.cpp \
-    rooms/r_fo_e.cpp \
-    rooms/r_fo_f.cpp
+    startwindow.cpp
 
 HEADERS  += mainwindow.h \
     player.h \
@@ -40,22 +35,12 @@ HEADERS  += mainwindow.h \
     food.h \
     weapon.h \
     gameprogress.h \
-    rooms/testfolder.h \
     startwindow.h \
     newmainwindow.h \
-    rooms/begin_room.h \
-    rooms/r_fo_c.h \
-    rooms/r_fo_d.h \
-    rooms/r_fo_e.h \
-    rooms/r_fo_f.h
+    rooms/begin_room.h
 
 FORMS    += mainwindow.ui \
     about.ui \
-    rooms/testfolder.ui \
     startwindow.ui \
     newmainwindow.ui \
-    rooms/begin_room.ui \
-    rooms/r_fo_c.ui \
-    rooms/r_fo_d.ui \
-    rooms/r_fo_e.ui \
-    rooms/r_fo_f.ui
+    rooms/begin_room.ui
