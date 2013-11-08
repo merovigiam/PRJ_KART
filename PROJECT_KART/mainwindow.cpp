@@ -31,3 +31,11 @@ void MainWindow::on_pushButton_clicked()
 {
     close();
 }
+
+void MainWindow::on_dreamRealityButton_clicked()
+{
+    // Change text to either dream or reality
+    // dreamReal = 1/2
+    // change image names to (roomName + dreamReal)
+
+}

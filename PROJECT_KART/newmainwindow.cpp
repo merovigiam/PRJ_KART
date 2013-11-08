@@ -1,3 +1,4 @@
+
 #include "newmainwindow.h"
 #include "ui_newmainwindow.h"
 
@@ -15,12 +16,8 @@ NewMainWindow::~NewMainWindow()
 
 void NewMainWindow::on_startButton_clicked()
 {
-    //MainWindow *mainWindow = new MainWindow(this);
-    //mainWindow->show();
-    //i do not think we are able to do such conversion, because there are too many changes needed to convert inbetween those two classes
-    //i had to recreate everything, not sucessfull trying to do that.
-    //and now the program properly closes after exit. (the process was open after everything was closed, for some reason, and the change in exec to show
-    //is the main reason that to happen.
+    //check button pressed last. {K, A, R, T, alt}
+    //player(name, hitPoints, foodLevel, armour, power);
 
     begin_room *begin  = new begin_room(this);
      begin->exec();
@@ -39,4 +36,29 @@ void NewMainWindow::on_aboutButton_clicked()
     delete aboutWindow;
 
 
+}
+
+void NewMainWindow::on_kButton_clicked()
+{
+    //setStats(Keith, 100, 100, 20, 20);
+}
+
+void NewMainWindow::on_aButton_clicked()
+{
+    //setStats(Aaron, 100, 100, 20, 20);
+}
+
+void NewMainWindow::on_rButton_clicked()
+{
+    //setStats(Ross, 100, 100, 20, 20);
+}
+
+void NewMainWindow::on_tButton_clicked()
+{
+    //setStats(Tiago , 100, 100, 20, 20);
+}
+
+void NewMainWindow::on_altButton_clicked()
+{
+    //setStats(Chris, 100, 100, 20, 20);
 }

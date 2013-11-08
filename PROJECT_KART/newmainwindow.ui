@@ -229,7 +229,7 @@
      <string>T</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
       <x>530</x>

@@ -24,7 +24,8 @@ SOURCES += main.cpp\
     gameprogress.cpp \
     newmainwindow.cpp \
     rooms/begin_room.cpp \
-    startwindow.cpp
+    startwindow.cpp \
+    messagedialog.cpp
 
 HEADERS  += mainwindow.h \
     player.h \
@@ -37,10 +38,12 @@ HEADERS  += mainwindow.h \
     gameprogress.h \
     startwindow.h \
     newmainwindow.h \
-    rooms/begin_room.h
+    rooms/begin_room.h \
+    messagedialog.h
 
 FORMS    += mainwindow.ui \
     about.ui \
     startwindow.ui \
     newmainwindow.ui \
-    rooms/begin_room.ui
+    rooms/begin_room.ui \
+    messagedialog.ui
