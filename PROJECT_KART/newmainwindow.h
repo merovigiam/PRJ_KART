@@ -25,6 +25,16 @@ private slots:
 
     void on_aboutButton_clicked();
 
+    void on_kButton_clicked();
+    
+    void on_aButton_clicked();
+    
+    void on_rButton_clicked();
+    
+    void on_tButton_clicked();
+    
+    void on_altButton_clicked();
+    
 private:
     Ui::NewMainWindow *ui;
 };
