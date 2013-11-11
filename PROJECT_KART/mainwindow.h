@@ -24,6 +24,7 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_dreamRealityButton_clicked();
 private:
     Ui::MainWindow *ui;
 };

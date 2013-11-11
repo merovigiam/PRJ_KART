@@ -91,7 +91,7 @@
     <item>
      <widget class="QPushButton" name="pushButton_9">
       <property name="text">
-       <string>item</string>
+       <string>CHANGE IMAGE!</string>
       </property>
      </widget>
     </item>
@@ -130,8 +130,8 @@
     <rect>
      <x>130</x>
      <y>30</y>
-     <width>48</width>
-     <height>110</height>
+     <width>55</width>
+     <height>133</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -243,8 +243,8 @@
     <rect>
      <x>250</x>
      <y>40</y>
-     <width>151</width>
-     <height>23</height>
+     <width>162</width>
+     <height>26</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -269,8 +269,8 @@
     <rect>
      <x>20</x>
      <y>30</y>
-     <width>98</width>
-     <height>110</height>
+     <width>116</width>
+     <height>133</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
