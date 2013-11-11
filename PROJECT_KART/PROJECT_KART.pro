@@ -13,7 +13,6 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
     player.cpp \
     item.cpp \
     inventory.cpp \
@@ -24,10 +23,9 @@ SOURCES += main.cpp\
     gameprogress.cpp \
     newmainwindow.cpp \
     rooms/begin_room.cpp \
-    startwindow.cpp \
     messagedialog.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS  += \
     player.h \
     item.h \
     inventory.h \
@@ -36,14 +34,12 @@ HEADERS  += mainwindow.h \
     food.h \
     weapon.h \
     gameprogress.h \
-    startwindow.h \
     newmainwindow.h \
     rooms/begin_room.h \
     messagedialog.h
 
-FORMS    += mainwindow.ui \
+FORMS    += \
     about.ui \
-    startwindow.ui \
     newmainwindow.ui \
     rooms/begin_room.ui \
     messagedialog.ui

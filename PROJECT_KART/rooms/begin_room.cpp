@@ -89,3 +89,8 @@ void begin_room::on_pushButton_9_clicked()
     }
     ui->minimapLabel->setPixmap(images[index][index2]);
 }
+
+void begin_room::on_pushButton_clicked()
+{
+    this->close();
+}

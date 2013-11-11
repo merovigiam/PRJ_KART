@@ -2,7 +2,7 @@
 #define NEWMAINWINDOW_H
 
 #include <QMainWindow>
-#include "mainwindow.h"
+
 #include "about.h"
 #include "rooms/begin_room.h"
 
