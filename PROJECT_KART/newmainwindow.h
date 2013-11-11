@@ -35,6 +35,8 @@ private slots:
     
     void on_altButton_clicked();
     
+    void on_exitButton_clicked();
+
 private:
     Ui::NewMainWindow *ui;
 };
