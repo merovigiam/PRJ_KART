@@ -62,3 +62,8 @@ void NewMainWindow::on_altButton_clicked()
 {
     //setStats(Chris, 100, 100, 20, 20);
 }
+
+void NewMainWindow::on_exitButton_clicked()
+{
+    this->close();
+}
