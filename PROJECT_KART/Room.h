@@ -14,7 +14,7 @@ private:
 	string description;
 	map<string, Room*> exits;
 	string exitString();
-     Inventory *itemsInRoom;
+    Inventory *itemsInRoom;
 
 
 public:
