@@ -26,6 +26,10 @@ public:
         return inv;
     }
 
+    inline int getSizeInv() {
+        return inv.size();
+    }
+
     string getInventoryList();
 
     Item getItemAt(int index);

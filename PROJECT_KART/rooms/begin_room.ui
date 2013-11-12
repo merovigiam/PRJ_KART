@@ -292,7 +292,22 @@
      <height>191</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="inventoryDisplay"/>
+   <layout class="QVBoxLayout" name="inventoryDisplay">
+    <item>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -344,6 +359,19 @@
    </property>
    <property name="text">
     <string>TestPic</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>460</y>
+     <width>61</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Update</string>
    </property>
   </widget>
  </widget>

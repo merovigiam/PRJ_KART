@@ -8,7 +8,7 @@
 #include <QtCore>
 #include "Room.h"
 #include <QMessageBox>
-#include "player.h"
+#include "inventory.h"
 
 enum I_INDEX{MAP=0,BKG1=1,BKG2=2};
 
@@ -25,7 +25,7 @@ public:
     explicit begin_room(QWidget *parent = 0);
     ~begin_room();
 
-    void updateInventoryDisplay(const Player player);
+    void updateInventoryDisplay(Inventory *inv);
     
 private slots:
     void on_pushButton_9_clicked();
@@ -55,6 +55,7 @@ private:
     void loadImages();
     string go(string direction);
     void roomCreation();
+    void clearLayout(QLayout* layout, bool deleteWidgets);
 
 
 

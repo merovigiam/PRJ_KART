@@ -173,3 +173,38 @@ void begin_room::on_pushButton_3_clicked()
 {
     TESTchangePictures();
 }
+
+void begin_room::clearLayout(QLayout* layout, bool deleteWidgets)
+{
+    while (QLayoutItem* item = layout->takeAt(0))
+    {
+        if (deleteWidgets)
+        {
+            if (QWidget* widget = item->widget())
+                delete widget;
+        }
+        if (QLayout* childLayout = item->layout())
+            clearLayout(childLayout, deleteWidgets);
+        delete item;
+    }
+}
+
+void begin_room::updateInventoryDisplay(Inventory* inv){
+    int size = ui->inventoryDisplay->count();
+
+    clearLayout(ui->inventoryDisplay->layout(),true);
+    size = inv->getSizeInv();
+    for(int i=0; i < size ; i++) {
+        ui->inventoryDisplay->addWidget(new QPushButton(inv->getItemAt(i).getDescription().c_str(),this));
+    }
+}
+
+void begin_room::on_pushButton_4_clicked()
+{
+    Inventory* pl = new Inventory();
+    pl->addItem(new Item("x"));
+    pl->addItem(new Item("y"));
+    pl->addItem(new Item("z"));
+    updateInventoryDisplay(pl);
+    delete pl;
+}
