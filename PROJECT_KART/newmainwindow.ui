@@ -14,17 +14,17 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="imageLabel">
     <property name="geometry">
      <rect>
       <x>340</x>
       <y>80</y>
-      <width>201</width>
-      <height>141</height>
+      <width>241</width>
+      <height>231</height>
      </rect>
     </property>
     <property name="text">
-     <string>             Character Image here</string>
+     <string/>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
@@ -45,7 +45,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="classLabel">
        <property name="text">
         <string>class type</string>
        </property>
@@ -131,17 +131,17 @@
      <string>Alt</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="cartLabel">
     <property name="geometry">
      <rect>
       <x>280</x>
       <y>30</y>
-      <width>321</width>
+      <width>131</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Known as &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;CART&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;!&lt;/span&gt; // Only show label if alt button is clicked&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string/>
     </property>
    </widget>
    <widget class="QProgressBar" name="physicalBar">
@@ -232,8 +232,8 @@
    <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>310</y>
+      <x>20</x>
+      <y>380</y>
       <width>75</width>
       <height>23</height>
      </rect>

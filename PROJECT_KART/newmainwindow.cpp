@@ -40,27 +40,92 @@ void NewMainWindow::on_aboutButton_clicked()
 
 void NewMainWindow::on_kButton_clicked()
 {
-    //setStats(Keith, 100, 100, 20, 20);
+	Player("Keith", 100, 100, 20, 20);
+    ui->healthBar->setValue(100);
+    ui->magicBar->setValue(0);
+    ui->physicalBar->setValue(80);
+    ui->classLabel->setText("Warrior");
+    ui->kButton->setVisible(false);
+    ui->startButton->setVisible(true);
+    ui->altButton->setVisible(true);
+    ui->aButton->setVisible(true);
+    ui->rButton->setVisible(true);
+    ui->tButton->setVisible(true);
+    ui->imageLabel->setPixmap(QPixmap("C:/Users/Ross/Desktop/Melee2", 0,Qt::AutoColor));
+    ui->cartLabel->setText("");
+    characterChosen = true;
 }
 
 void NewMainWindow::on_aButton_clicked()
 {
-    //setStats(Aaron, 100, 100, 20, 20);
+    Player("Aaron", 100, 100, 20, 20);
+    ui->healthBar->setValue(100);
+    ui->magicBar->setValue(5);
+    ui->physicalBar->setValue(75);
+    ui->classLabel->setText("Ranged");
+    ui->aButton->setVisible(false);
+    ui->startButton->setVisible(true);
+    ui->kButton->setVisible(true);
+    ui->altButton->setVisible(true);
+    ui->rButton->setVisible(true);
+    ui->tButton->setVisible(true);
+    ui->imageLabel->setPixmap(QPixmap("C:/Users/Ross/Desktop/Archer2", 0,Qt::AutoColor));
+    ui->cartLabel->setText("");
+    characterChosen = true;
 }
 
 void NewMainWindow::on_rButton_clicked()
 {
-    //setStats(Ross, 100, 100, 20, 20);
+    Player("Ross", 100, 100, 20, 20);
+    ui->healthBar->setValue(100);
+    ui->magicBar->setValue(10);
+    ui->physicalBar->setValue(60);
+    ui->classLabel->setText("Tank");
+    ui->rButton->setVisible(false);
+    ui->startButton->setVisible(true);
+    ui->kButton->setVisible(true);
+    ui->aButton->setVisible(true);
+    ui->altButton->setVisible(true);
+    ui->tButton->setVisible(true);
+    ui->imageLabel->setPixmap(QPixmap("C:/Users/Ross/Desktop/Melee2", 0,Qt::AutoColor));
+    ui->cartLabel->setText("");
+    characterChosen = true;
 }
 
 void NewMainWindow::on_tButton_clicked()
 {
-    //setStats(Tiago , 100, 100, 20, 20);
+    Player("Tiago" , 100, 100, 20, 20);
+    ui->healthBar->setValue(100);
+    ui->magicBar->setValue(60);
+    ui->physicalBar->setValue(10);
+    ui->classLabel->setText("Mage");
+    ui->tButton->setVisible(false);
+    ui->startButton->setVisible(true);
+    ui->kButton->setVisible(true);
+    ui->aButton->setVisible(true);
+    ui->rButton->setVisible(true);
+    ui->altButton->setVisible(true);
+    ui->imageLabel->setPixmap(QPixmap("C:/Users/Ross/Desktop/Mage2.png", 0,Qt::AutoColor));
+    ui->cartLabel->setText("");
+    characterChosen = true;
 }
 
 void NewMainWindow::on_altButton_clicked()
 {
-    //setStats(Chris, 100, 100, 20, 20);
+    Player("Chris", 100, 100, 20, 20);
+    ui->healthBar->setValue(100);
+    ui->magicBar->setValue(69);
+    ui->physicalBar->setValue(0);
+    ui->classLabel->setText("Priest");
+    ui->altButton->setVisible(false);
+    ui->startButton->setVisible(true);
+    ui->kButton->setVisible(true);
+    ui->aButton->setVisible(true);
+    ui->rButton->setVisible(true);
+    ui->tButton->setVisible(true);
+    ui->imageLabel->setPixmap(QPixmap("C:/Users/Ross/Desktop/chris.jpg", 0,Qt::AutoColor));
+    ui->cartLabel->setText("Known as CART");
+    characterChosen = true;
 }
 
 void NewMainWindow::on_exitButton_clicked()

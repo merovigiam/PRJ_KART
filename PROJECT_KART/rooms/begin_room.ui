@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1083</width>
-    <height>568</height>
+    <width>831</width>
+    <height>567</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,21 +16,27 @@
   <widget class="QLabel" name="minimapLabel">
    <property name="geometry">
     <rect>
-     <x>145</x>
-     <y>272</y>
-     <width>171</width>
-     <height>111</height>
+     <x>30</x>
+     <y>220</y>
+     <width>141</width>
+     <height>81</height>
     </rect>
    </property>
+   <property name="maximumSize">
+    <size>
+     <width>231</width>
+     <height>16777215</height>
+    </size>
+   </property>
    <property name="text">
-    <string>                       Minimap</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="southButton">
    <property name="geometry">
     <rect>
-     <x>650</x>
-     <y>321</y>
+     <x>620</x>
+     <y>431</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -55,14 +61,14 @@
   <widget class="QLabel" name="currentRoomLabel">
    <property name="geometry">
     <rect>
-     <x>550</x>
-     <y>20</y>
-     <width>311</width>
-     <height>191</height>
+     <x>470</x>
+     <y>50</y>
+     <width>331</width>
+     <height>221</height>
     </rect>
    </property>
    <property name="text">
-    <string>                                    Current Room Image</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_10">
@@ -78,102 +84,102 @@
     <string>Current status:</string>
    </property>
   </widget>
-  <widget class="QWidget" name="verticalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>929</x>
-     <y>9</y>
-     <width>141</width>
-     <height>381</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QPushButton" name="pushButton_9">
-      <property name="text">
-       <string>CHANGE IMAGE!</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_10">
-      <property name="text">
-       <string>item</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_12">
-      <property name="text">
-       <string>item</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_13">
-      <property name="text">
-       <string>item</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_11">
-      <property name="text">
-       <string>item</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>130</x>
      <y>30</y>
-     <width>55</width>
-     <height>133</height>
+     <width>48</width>
+     <height>110</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_4">
     <item>
      <widget class="QLabel" name="hemetLabel">
       <property name="text">
-       <string>TextLabel</string>
+       <string>None</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="chestplateLabel">
       <property name="text">
-       <string>TextLabel</string>
+       <string>None</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="legsLabel">
       <property name="text">
-       <string>TextLabel</string>
+       <string>None</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="bootsLabel">
       <property name="text">
-       <string>TextLabel</string>
+       <string>None</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="primaryWepLabel">
       <property name="text">
-       <string>TextLabel</string>
+       <string>None</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="secondaryWepLabel">
       <property name="text">
-       <string>TextLabel</string>
+       <string>None</string>
       </property>
      </widget>
     </item>
@@ -205,46 +211,46 @@
     <string>Fatigued</string>
    </property>
   </widget>
-  <widget class="QWidget" name="verticalLayoutWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>930</x>
-     <y>400</y>
-     <width>141</width>
-     <height>151</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <widget class="QPushButton" name="pushButton_5">
-      <property name="text">
-       <string>Use</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_8">
-      <property name="text">
-       <string>Drop</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_7">
-      <property name="text">
-       <string>Eat</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <widget class="QWidget" name="layoutWidget_2">
    <property name="geometry">
     <rect>
      <x>250</x>
      <y>40</y>
-     <width>162</width>
-     <height>26</height>
+     <width>151</width>
+     <height>23</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -269,50 +275,56 @@
     <rect>
      <x>20</x>
      <y>30</y>
-     <width>116</width>
-     <height>133</height>
+     <width>98</width>
+     <height>110</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
      <widget class="QLabel" name="label_4">
       <property name="text">
-       <string>Helmet:</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Helmet:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="label_5">
       <property name="text">
-       <string>Chestplate:</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Chestplate:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="label_6">
       <property name="text">
-       <string>Legs:</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Legs:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="label_7">
       <property name="text">
-       <string>Boots:</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Boots:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="label_8">
       <property name="text">
-       <string>Primary weapon:</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Primary weapon:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="label_9">
       <property name="text">
-       <string>Secondary weapon:</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Secondary weapon:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+
       </property>
      </widget>
     </item>
@@ -321,8 +333,8 @@
   <widget class="QPushButton" name="eastButton">
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>290</y>
+     <x>670</x>
+     <y>400</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -334,8 +346,8 @@
   <widget class="QPushButton" name="northButton">
    <property name="geometry">
     <rect>
-     <x>650</x>
-     <y>259</y>
+     <x>620</x>
+     <y>369</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -347,8 +359,8 @@
   <widget class="QPushButton" name="westButton">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>290</y>
+     <x>570</x>
+     <y>400</y>
      <width>101</width>
      <height>31</height>
     </rect>
