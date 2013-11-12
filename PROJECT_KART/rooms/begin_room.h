@@ -6,7 +6,7 @@
 #include <vector>
 #include <string>
 #include <QtCore>
-
+#include "Room.h"
 
 enum I_INDEX{MAP=0,BKG1=1,BKG2=2};
 
@@ -35,6 +35,11 @@ private:
     vector<vector<QPixmap> > images;
     void loadImages();
 
+    vector<Room *> rooms;
+
+    enum ROOM_NU { RN_B=0, RN_C=1, RN_D=2, RN_E, RN_F, RN_G, RN_H, RN_I, RN_J, RN_K, RN_L, RN_N, RN_M, RN_O, RN_P, RN_Q, RN_R, RN_S, RN_T };
+
+    void roomCreation();
 
     const int I_MAX = 3;
     const int G_MAX_ROOMS = 19;

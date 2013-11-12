@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     gameprogress.cpp \
     newmainwindow.cpp \
     rooms/begin_room.cpp \
-    messagedialog.cpp
+    messagedialog.cpp \
+    Room.cpp
 
 HEADERS  += \
     player.h \
@@ -36,7 +37,8 @@ HEADERS  += \
     gameprogress.h \
     newmainwindow.h \
     rooms/begin_room.h \
-    messagedialog.h
+    messagedialog.h \
+    Room.h
 
 FORMS    += \
     about.ui \

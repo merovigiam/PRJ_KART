@@ -11,11 +11,67 @@ begin_room::begin_room(QWidget *parent) :
     loadImages();
     ui->minimapLabel->setPixmap(images[0][0]);
     //label->setPixmap(QPixmap("C:/Users/manolis/Desktop/data/test.png", 0, Qt::AutoColor));
+
+
+    void roomCreation();
+}
+
+void begin_room::roomCreation(){
+    rooms.resize(G_MAX_ROOMS);
+    char c = 'b';
+    for(int i=0;i<G_MAX_ROOMS;i++) {
+        rooms.push_back(new Room(""+c));
+    }
+
+    //                   (N, E, S, W)
+    rooms[RN_B]->setExits(NULL, rooms[RN_C], NULL, NULL);
+
+    rooms[RN_C]->setExits(rooms[RN_F], rooms[RN_D], NULL, rooms[RN_B]);
+
+    rooms[RN_D]->setExits(NULL, NULL, rooms[RN_E], rooms[RN_C]);
+
+    rooms[RN_E]->setExits(rooms[RN_D], NULL, NULL, NULL);
+
+    rooms[RN_F]->setExits(rooms[RN_G], NULL , rooms[RN_C], NULL);
+
+    rooms[RN_G]->setExits(rooms[RN_H], NULL, rooms[RN_F], NULL);
+
+    rooms[RN_H]->setExits(rooms[RN_L], rooms[RN_I], rooms[RN_G], rooms[RN_J]);
+
+    rooms[RN_I]->setExits(NULL,NULL,NULL, rooms[RN_H]);
+
+    rooms[RN_J]->setExits(rooms[RN_K], rooms[RN_H], NULL,NULL);
+
+    rooms[RN_K]->setExits(NULL,NULL, rooms[RN_J], rooms[RN_L]);
+
+    rooms[RN_L]->setExits(NULL, rooms[RN_M], rooms[RN_H], rooms[RN_K]);
+
+    rooms[RN_M]->setExits(rooms[RN_N], NULL,NULL, rooms[RN_L]);
+
+    rooms[RN_N]->setExits(rooms[RN_P], rooms[RN_S], rooms[RN_M], rooms[RN_O]);
+
+    rooms[RN_O]->setExits(NULL,NULL,NULL, rooms[RN_N]);
+
+    rooms[RN_P]->setExits(NULL, rooms[RN_Q], rooms[RN_N], rooms[RN_R]);
+
+    rooms[RN_Q]->setExits(NULL,NULL,NULL, rooms[RN_P]);
+
+    rooms[RN_R]->setExits(NULL, rooms[RN_P], NULL ,NULL);
+
+    rooms[RN_S]->setExits(NULL, rooms[RN_N], rooms[RN_T], NULL);
+
+    rooms[RN_T]->setExits(rooms[RN_S], NULL,NULL,NULL);
+
+    //                   (N, E, S, W)
 }
 
 begin_room::~begin_room()
 {
     delete ui;
+
+    //TODO: free rooms from memory
+    //for(int i=0;i<G_MAX_ROOMS;i++)
+      //  rooms[i]->
 
 }
 
