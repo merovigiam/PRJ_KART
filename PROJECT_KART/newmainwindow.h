@@ -6,6 +6,7 @@
 #include "about.h"
 #include "rooms/begin_room.h"
 #include "player.h"
+#include "messagedialog.h"
 
 namespace Ui {
 class NewMainWindow;

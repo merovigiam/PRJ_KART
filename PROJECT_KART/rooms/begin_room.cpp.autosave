@@ -173,3 +173,17 @@ void begin_room::on_pushButton_3_clicked()
 {
     TESTchangePictures();
 }
+
+void begin_room::updateInventoryDisplay(const Player player){
+    ui->inventoryDisplay->count();
+    
+}
+
+void begin_room::on_pushButton_4_clicked()
+{
+    Player* pl = new Player("goku");
+    pl->getInventory().addItem(new Item("x"));
+    pl->getInventory().addItem(new Item("y"));
+    pl->getInventory().addItem(new Item("z"));
+    updateInventoryDisplay();
+}
