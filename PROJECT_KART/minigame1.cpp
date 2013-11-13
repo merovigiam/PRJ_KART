@@ -62,6 +62,10 @@ void MiniGame1::on_verticalScroll_sliderMoved(int position)
         QRect anew  = ui->me->geometry();
         anew.moveTo(anew.x(),position);
         ui->me->setGeometry(anew);
+        if(checkFinish()) {
+            QMessageBox::information(NULL, "Congratulations!", "You successfully finished the mini game. you may proceed now.");
+            this->close();
+        }
     }
 }
 
