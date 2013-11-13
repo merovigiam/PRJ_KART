@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <vector>
+#include <QMessageBox>
 
 using namespace std;
 

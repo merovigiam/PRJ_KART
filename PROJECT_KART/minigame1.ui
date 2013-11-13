@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Find the exit!</string>
   </property>
   <widget class="QScrollBar" name="horizontalScroll">
    <property name="geometry">
@@ -44,8 +44,8 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
+      <x>40</x>
+      <y>50</y>
       <width>31</width>
       <height>31</height>
      </rect>
