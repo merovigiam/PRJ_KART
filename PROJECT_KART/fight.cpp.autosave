@@ -109,7 +109,7 @@ void fight::on_attack2_clicked()
 void fight::on_healButton_clicked()
 {
     //Have a val in food that if there is something in the vector that foodPresent = true && how much food items are there
-    if(foodPresent)
+    if(currentPlayer.hasFood() == true)
     {
         if(currentPlayer.getHitPoints() + healValue > currentPlayer.getHitPoints())
         {
@@ -128,7 +128,7 @@ void fight::on_healButton_clicked()
 
         ui->actionsDoneLabel->setText("The enemy attacked!");
         currentPlayer.setHitPoints(currentPlayer.getHitPoints() - currentEnemy.getPower());
-        if (currCharHp <= 0)
+        if (currentPlayer.getHitPoints() <= 0)
         {
             QMessageBox::information( this, tr("You have lost! D:"), tr("You're quest has ended,\nChoose a new character\n and begin your quest again") );
             accept();

@@ -2,7 +2,7 @@
 
 Inventory::Inventory()
 {
-    inv = vector<Item>(10) ;
+    inv = vector<Item*>(10) ;
 }
 
 string Inventory::getInventoryList(){
@@ -11,9 +11,9 @@ string Inventory::getInventoryList(){
 
     for(int i=0;i<size;i++) {
         if(i != (size-1))
-            output = output + inv[i].getDescription() + ",";
+            output = output + (*inv[i]).getDescription() + ",";
         else
-            output = output + inv[i].getDescription();
+            output = output + (*inv[i]).getDescription();
     }
     return output;
 }
@@ -22,7 +22,7 @@ Item Inventory::getItemAt(int index){
     int size = inv.size();
     Item item("null");
     if(index < size)
-        return inv[index];
+        return *inv[index];
     else
         return item;
 
@@ -32,7 +32,7 @@ Item Inventory::removeItem(int index){
     int i = 0, size = inv.size();
     Item item("null");
     if(index < size) {
-        Item output = inv[index];
+        Item output = *inv[index];
         inv.erase(inv.begin()+index);
         return output;
     }

@@ -5,7 +5,6 @@
 Room::Room(string description) {
 	this->description = description;
     this->itemsInRoom = new Inventory();
-
 }
 
 void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
@@ -24,7 +23,7 @@ string Room::shortDescription() {
 }
 
 string Room::longDescription() {
-    return "room = " + description; //+ ".\n" + displayItem() + exitString();
+	return "room = " + description + ".\n" + displayItem() + exitString();
 }
 
 string Room::exitString() {
@@ -46,7 +45,7 @@ Room* Room::nextRoom(string direction) {
 void Room::addItem(Item *inItem) {
     //cout <<endl;
     //cout << "Just added" + inItem->getLongDescription();
-    itemsInRoom->addItem(*inItem);
+    itemsInRoom->addItem(inItem);
 }
 
 string Room::displayItem() {

@@ -18,7 +18,7 @@ public:
     Item() ;
     Item (string description, int inWeight, float inValue);
     Item (string description);
-
+    virtual ~Item() ;
     inline string getType() {
         return "item";
     }

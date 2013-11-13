@@ -2,6 +2,8 @@
 #define FIGHT_H
 
 #include <QDialog>
+#include "player.h"
+#include "enemy.h"
 
 namespace Ui {
 class fight;
@@ -12,7 +14,7 @@ class fight : public QDialog
     Q_OBJECT
     
 public:
-    explicit fight(QWidget *parent = 0);
+    explicit fight(Player player, Enemy enemy, QWidget *parent = 0);
     ~fight();
     
 private slots:
@@ -26,10 +28,8 @@ private slots:
 
 private:
     Ui::fight *ui;
-    int currCharHp;
-    int currEnemyHp;
-    bool foodPresent;
-    int amountOfFood;
+    Player currentPlayer ;
+    Enemy currentEnemy ;
 };
 
 #endif // FIGHT_H

@@ -20,8 +20,7 @@ void NewMainWindow::on_startButton_clicked()
     //player(name, hitPoints, foodLevel, armour, power);
 
     begin_room *begin  = new begin_room(this);
-
-    begin->exec();
+     begin->exec();
      delete begin;
 }
 
