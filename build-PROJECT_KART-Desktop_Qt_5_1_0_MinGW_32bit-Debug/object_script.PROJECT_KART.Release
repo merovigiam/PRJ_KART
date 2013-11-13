@@ -1,6 +1,5 @@
 INPUT(
 ./release\main.o
-./release\mainwindow.o
 ./release\player.o
 ./release\item.o
 ./release\inventory.o
@@ -9,10 +8,12 @@ INPUT(
 ./release\food.o
 ./release\weapon.o
 ./release\gameprogress.o
-./release\testfolder.o
-./release\startwindow.o
-./release\moc_mainwindow.o
+./release\newmainwindow.o
+./release\begin_room.o
+./release\messagedialog.o
+./release\Room.o
 ./release\moc_about.o
-./release\moc_testfolder.o
-./release\moc_startwindow.o
+./release\moc_newmainwindow.o
+./release\moc_begin_room.o
+./release\moc_messagedialog.o
 );

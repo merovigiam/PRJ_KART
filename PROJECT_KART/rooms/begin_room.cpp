@@ -1,5 +1,6 @@
 #include "begin_room.h"
 #include "ui_begin_room.h"
+#include "fight.h"
 
 begin_room::begin_room(QWidget *parent) :
     QDialog(parent),
@@ -106,31 +107,20 @@ void begin_room::loadImages(){
                // file = fopen(name.c_str(),"r"); testing
                 images[j][counter] = QPixmap(QString(name.c_str()), 0, Qt::AutoColor);
 
-
                 break;
             case BKG1:
                 name = (pattern0+i+"1"+pattern1);
                 images[j][counter] = QPixmap(QString(name.c_str()), 0, Qt::AutoColor);
 
                 break;
-
             case BKG2:
                 name = (pattern0+i+"2"+pattern1);
                 images[j][counter] = QPixmap(QString(name.c_str()), 0, Qt::AutoColor);
 
-
                 break;
-
-
             }
         }
-
-
-
-
     }
-
-
 }
 
 void begin_room::on_pushButton_9_clicked()
@@ -186,4 +176,11 @@ string begin_room::go(string direction) {
         currentRoom = nextRoom;
         return currentRoom->longDescription();
     }
+}
+void begin_room::battle()
+{
+    Fight *fight = new Fight(this);
+    fight->setWindowFlags(Qt::Dialog | Qt::Desktop);
+    fight.exec();
+    delete fight;
 }

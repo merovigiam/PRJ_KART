@@ -24,7 +24,8 @@ SOURCES += main.cpp\
     newmainwindow.cpp \
     rooms/begin_room.cpp \
     messagedialog.cpp \
-    Room.cpp
+    Room.cpp \
+    fight.cpp
 
 HEADERS  += \
     player.h \
@@ -38,13 +39,15 @@ HEADERS  += \
     newmainwindow.h \
     rooms/begin_room.h \
     messagedialog.h \
-    Room.h
+    Room.h \
+    fight.h
 
 FORMS    += \
     about.ui \
     newmainwindow.ui \
     rooms/begin_room.ui \
-    messagedialog.ui
+    messagedialog.ui \
+    fight.ui
 
 OTHER_FILES += \
     images/rooms/t2.jpg \
