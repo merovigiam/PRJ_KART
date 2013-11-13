@@ -42,6 +42,9 @@ void NewMainWindow::on_pushButton_clicked()
 
 void NewMainWindow::on_aboutButton_clicked()
 {
+    MiniGame1 *win = new MiniGame1(this);
+    win->exec();
+
     About *aboutWindow = new About(this);
     aboutWindow->exec();
     delete aboutWindow;

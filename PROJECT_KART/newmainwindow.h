@@ -7,6 +7,7 @@
 #include "rooms/begin_room.h"
 #include "player.h"
 #include "messagedialog.h"
+#include "minigame1.h"
 
 namespace Ui {
 class NewMainWindow;
