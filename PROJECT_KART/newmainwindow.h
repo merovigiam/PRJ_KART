@@ -42,6 +42,7 @@ private slots:
 private:
     Ui::NewMainWindow *ui;
 	bool characterChosen = false;
+    Player* player;
 };
 
 #endif // NEWMAINWINDOW_H

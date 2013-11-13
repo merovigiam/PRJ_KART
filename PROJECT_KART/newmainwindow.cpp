@@ -19,10 +19,20 @@ void NewMainWindow::on_startButton_clicked()
 {
     //check button pressed last. {K, A, R, T, alt}
     //player(name, hitPoints, foodLevel, armour, power);
+    if(!characterChosen){
+        QMessageBox::information(NULL, "Invalid Move!", "You must select your player with one of the buttons bellow: K, A, R or T.");
 
-    begin_room *begin  = new begin_room(this);
-     begin->exec();
-     delete begin;
+    }
+    else if(player == NULL) {
+        QMessageBox::information(NULL, "Invalid Move!", "You must select another player now.");
+    }
+    else {
+        begin_room *begin  = new begin_room(player, this);
+        begin->exec();
+        delete begin;
+        delete player;
+        player = NULL;
+    }
 }
 
 void NewMainWindow::on_pushButton_clicked()
@@ -41,7 +51,7 @@ void NewMainWindow::on_aboutButton_clicked()
 
 void NewMainWindow::on_kButton_clicked()
 {
-	Player("Keith", 100, 100, 20, 20);
+    player = new Player("Keith", 100, 100, 20, 20);
     ui->healthBar->setValue(100);
     ui->magicBar->setValue(0);
     ui->physicalBar->setValue(80);
@@ -59,7 +69,7 @@ void NewMainWindow::on_kButton_clicked()
 
 void NewMainWindow::on_aButton_clicked()
 {
-    Player("Aaron", 100, 100, 20, 20);
+    player = new Player("Aaron", 100, 100, 20, 20);
     ui->healthBar->setValue(100);
     ui->magicBar->setValue(5);
     ui->physicalBar->setValue(75);
@@ -77,7 +87,7 @@ void NewMainWindow::on_aButton_clicked()
 
 void NewMainWindow::on_rButton_clicked()
 {
-    Player("Ross", 100, 100, 20, 20);
+    player = new Player("Ross", 100, 100, 20, 20);
     ui->healthBar->setValue(100);
     ui->magicBar->setValue(10);
     ui->physicalBar->setValue(60);
@@ -95,7 +105,7 @@ void NewMainWindow::on_rButton_clicked()
 
 void NewMainWindow::on_tButton_clicked()
 {
-    Player("Tiago" , 100, 100, 20, 20);
+    player = new Player("Tiago" , 100, 100, 20, 20);
     ui->healthBar->setValue(100);
     ui->magicBar->setValue(60);
     ui->physicalBar->setValue(10);
@@ -113,7 +123,7 @@ void NewMainWindow::on_tButton_clicked()
 
 void NewMainWindow::on_altButton_clicked()
 {
-    Player("Chris", 100, 100, 20, 20);
+    player = new Player("Chris", 100, 100, 20, 20);
     ui->healthBar->setValue(100);
     ui->magicBar->setValue(69);
     ui->physicalBar->setValue(0);

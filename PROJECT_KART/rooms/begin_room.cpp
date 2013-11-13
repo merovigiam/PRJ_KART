@@ -1,10 +1,11 @@
 #include "begin_room.h"
 #include "ui_begin_room.h"
 
-begin_room::begin_room(QWidget *parent) :
+begin_room::begin_room(Player* player, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::begin_room)
 {
+    this->player = player;
     index = 0;
     index2 = 0;
     ui->setupUi(this);

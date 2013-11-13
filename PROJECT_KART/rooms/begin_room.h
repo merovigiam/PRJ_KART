@@ -9,6 +9,7 @@
 #include "Room.h"
 #include <QMessageBox>
 #include "inventory.h"
+#include "player.h"
 
 enum I_INDEX{MAP=0,BKG1=1,BKG2=2};
 
@@ -22,7 +23,7 @@ class begin_room : public QDialog
     Q_OBJECT
     
 public:
-    explicit begin_room(QWidget *parent = 0);
+    explicit begin_room(Player *player, QWidget *parent = 0);
     ~begin_room();
 
     void updateInventoryDisplay(Inventory *inv);
@@ -50,6 +51,7 @@ private:
     vector<Room *> rooms;
     Room* currentRoom;
     vector<vector<QPixmap> > images;
+    Player* player;
 
     void TESTchangePictures();
     void loadImages();
