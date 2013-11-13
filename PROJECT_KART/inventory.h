@@ -8,21 +8,23 @@ using namespace std;
 class Inventory
 {
 private:
-    vector<Item> inv;
+    vector<Item*> inv;
 
 public:
     Inventory();
 
     inline void addItem(Item &item) {
-        inv.push_back(item);
+        Item *temp ;
+        *temp = item ;
+        inv.push_back(temp);
     }
 
     inline void addItem(Item *item) {
-        inv.push_back(*item);
+        inv.push_back(item);
         delete item;
     }
 
-    inline const vector<Item> getInventoryListArray() {
+    inline const vector<Item*> getInventoryListArray() {
         return inv;
     }
 
@@ -31,6 +33,10 @@ public:
     Item getItemAt(int index);
 
     Item removeItem(int index);
+    inline int size()
+    {
+        return inv.size() ;
+    }
 
 
 

@@ -1,6 +1,7 @@
 #include "food.h"
 #include "player.h"
 #include "inventory.h"
+#include <typeinfo>
 
 void Player::initialize() {
     weaponMain = NULL;
@@ -61,10 +62,32 @@ void Player::equip(Item* weapon, bool isMain)
     }
 }
 
+void Player::setHitPoints(int hitPoints)
+{
+    this->hitPoints = hitPoints ;
+}
 
+int Player::getHitPoints()
+{
+    return hitPoints ;
+}
 
+bool Player::hasFood()
+{
+    for(int i = 0 ; i < this->inv->size() ; i++) {
+        Food *isItFood ;
+        Item *item ;
+         *item = this->inv->getItemAt(i) ;
+        try {
+            isItFood = dynamic_cast<Food*>(item);
+        } catch(std::bad_cast) {
 
-Player::~Player(){
+        }
+    }
+}
+
+Player::~Player()
+{
     if(inv != NULL) {
         delete inv;
     }
@@ -74,6 +97,4 @@ Player::~Player(){
     if(weaponMain != NULL) {
         delete weaponMain;
     }
-
-
 }

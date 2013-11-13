@@ -13,14 +13,14 @@ begin_room::begin_room(QWidget *parent) :
     //label->setPixmap(QPixmap("C:/Users/manolis/Desktop/data/test.png", 0, Qt::AutoColor));
 
 
-    roomCreation();
+    void roomCreation();
 }
 
 void begin_room::roomCreation(){
-    //rooms.resize(G_MAX_ROOMS);
+    rooms.resize(G_MAX_ROOMS);
     char c = 'b';
     for(int i=0;i<G_MAX_ROOMS;i++) {
-        rooms.push_back(new Room(""+c++));
+        rooms.push_back(new Room(""+c));
     }
 
     //                   (N, E, S, W)
@@ -63,7 +63,6 @@ void begin_room::roomCreation(){
     rooms[RN_T]->setExits(rooms[RN_S], NULL,NULL,NULL);
 
     //                   (N, E, S, W)
-    currentRoom = rooms[RN_B];
 }
 
 begin_room::~begin_room()
@@ -150,40 +149,4 @@ void begin_room::on_pushButton_9_clicked()
 void begin_room::on_pushButton_clicked()
 {
     this->close();
-}
-
-void begin_room::on_northButton_clicked()
-{
-    //north
-    go("north");
-    QMessageBox::information(NULL, "Hello World!", "Hi!");
-}
-
-void begin_room::on_southButton_clicked()
-{
-    //south
-    go("south");
-}
-
-void begin_room::on_eastButton_clicked()
-{
-    //east
-    go("east");
-}
-
-void begin_room::on_westButton_clicked()
-{
-    //west
-    go("west");
-}
-
-string begin_room::go(string direction) {
-    Room* nextRoom = currentRoom->nextRoom(direction);
-    if (nextRoom == NULL)
-        return("direction null");
-    else
-    {
-        currentRoom = nextRoom;
-        return currentRoom->longDescription();
-    }
 }
