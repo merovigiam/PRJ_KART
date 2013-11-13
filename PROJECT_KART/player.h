@@ -1,11 +1,24 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include <typeinfo>
+
 #include <string>
+
+#include "item.h"
+#include "food.h"
+#include "weapon.h"
 #include "inventory.h"
 #include "enemy.h"
-#include "weapon.h"
-#include "food.h"
+
+
+
+
+
+
+
+
+
 
 using namespace std;
 
@@ -32,6 +45,8 @@ public:
     {
         return this->power ;
 	}
+
+
 
     inline const Inventory getInventory() {
         return *inv;

@@ -18,7 +18,8 @@ public:
     Item() ;
     Item (string description, int inWeight, float inValue);
     Item (string description);
-    virtual ~Item() ;
+    //~Item() ; why this line was inserted?
+
     inline string getType() {
         return "item";
     }

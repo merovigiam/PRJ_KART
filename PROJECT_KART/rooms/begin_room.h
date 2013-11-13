@@ -10,6 +10,7 @@
 #include <QMessageBox>
 #include "inventory.h"
 #include "player.h"
+#include "item.h"
 
 enum I_INDEX{MAP=0,BKG1=1,BKG2=2};
 
@@ -55,10 +56,6 @@ private:
 
     void TESTchangePictures();
     void loadImages();
-
-
-    vector<Room *> rooms;
-
     string go(string direction);
     void roomCreation();
     void clearLayout(QLayout* layout, bool deleteWidgets);

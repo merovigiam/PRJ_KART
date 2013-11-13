@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "item.h"
+
 using namespace std;
 
 class Inventory
@@ -34,9 +35,10 @@ public:
 
     string getInventoryList();
 
-    Item getItemAt(int index);
+    Item *getItemAt(int index);
 
     Item removeItem(int index);
+
     inline int size()
     {
         return inv.size() ;

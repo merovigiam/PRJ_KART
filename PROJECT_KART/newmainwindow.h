@@ -5,9 +5,10 @@
 
 #include "about.h"
 #include "rooms/begin_room.h"
-#include "player.h"
+
 #include "messagedialog.h"
 #include "minigame1.h"
+#include "player.h"
 
 namespace Ui {
 class NewMainWindow;

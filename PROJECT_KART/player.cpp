@@ -1,7 +1,9 @@
-#include "food.h"
 #include "player.h"
-#include "inventory.h"
-#include <typeinfo>
+
+/*
+ * NEVER INCLUDE INCLUDE DIRECTIVES HERE
+ * this is the fourth time i am writing in this project. some commits have this comment, some files too.
+ **/
 
 void Player::initialize() {
     weaponMain = NULL;
@@ -77,9 +79,10 @@ bool Player::hasFood()
     for(int i = 0 ; i < this->inv->size() ; i++) {
         Food *isItFood ;
         Item *item ;
-         *item = this->inv->getItemAt(i) ;
+   //what?      *item = this->inv->getItemAt(i) ;
+        //there is no need for trycatch here, due the existence of this method: inline string getType() {, it will return the type of the class
         try {
-            isItFood = dynamic_cast<Food*>(item);
+            //isItFood = dynamic_cast<Food*>(item);
         } catch(std::bad_cast) {
 
         }

@@ -196,7 +196,7 @@ void begin_room::updateInventoryDisplay(Inventory* inv){
     clearLayout(ui->inventoryDisplay->layout(),true);
     size = inv->getSizeInv();
     for(int i=0; i < size ; i++) {
-        ui->inventoryDisplay->addWidget(new QPushButton(inv->getItemAt(i).getDescription().c_str(),this));
+        ui->inventoryDisplay->addWidget(new QPushButton(inv->getItemAt(i)->getDescription().c_str(),this));
     }
 }
 

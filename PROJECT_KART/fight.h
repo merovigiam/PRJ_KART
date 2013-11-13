@@ -1,7 +1,10 @@
 #ifndef FIGHT_H
 #define FIGHT_H
 
+#include <QMessageBox>
+#include <QMutex>
 #include <QDialog>
+#include "newmainwindow.h"
 #include "player.h"
 #include "enemy.h"
 
@@ -14,7 +17,7 @@ class fight : public QDialog
     Q_OBJECT
     
 public:
-    explicit fight(Player player, Enemy enemy, QWidget *parent = 0);
+    explicit fight(Player *player, Enemy *enemy, QWidget *parent = 0);
     ~fight();
     
 private slots:
@@ -28,8 +31,8 @@ private slots:
 
 private:
     Ui::fight *ui;
-    Player currentPlayer ;
-    Enemy currentEnemy ;
+    Player *currentPlayer ;
+    Enemy *currentEnemy ;
 };
 
 #endif // FIGHT_H

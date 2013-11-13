@@ -21,18 +21,18 @@ string Inventory::getInventoryList(){
     return output;
 }
 
-Item Inventory::getItemAt(int index){
+Item* Inventory::getItemAt(int index){
     int size = inv.size();
-    Item item("null");
+    //Item *item= new Item("null"); leak
     if(index < size)
-        return *inv[index];
+        return inv[index];
     else
-        return item;
+        return NULL;
 
 }
 
 Item Inventory::removeItem(int index){
-    int i = 0, size = inv.size();
+    int size = inv.size();
     Item item("null");
     if(index < size) {
         Item output = *inv[index];
