@@ -2,7 +2,10 @@
 
 Inventory::Inventory()
 {
-    inv = vector<Item*>(10) ;
+
+    //inv = vector<Item>(10) ;
+    //reeeeeeeeeeeeeeeeeeally bad, is creating a inventory with 10 null itens!
+
 }
 
 string Inventory::getInventoryList(){

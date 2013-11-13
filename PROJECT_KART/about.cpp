@@ -58,13 +58,14 @@ About::~About()
     delete ui;
     timer->stop();
 
-    delete timer;
+    //problem in the next line.
+   //fixed now? //TODO: FIX THIS LINE//delete timer;
 }
 
 void About::on_pushButton_2_clicked()
 {
     this->close();
-    this->~About(); //how to properly close the window?
+    //this->~About(); //how to properly close the window?
     //if just close is called, the windows would still in memory and the thread would keep runing. is this a ok behavior?
     //it is strange to me to manually call de destructor.
     //this->destroy();

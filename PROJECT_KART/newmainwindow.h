@@ -6,6 +6,8 @@
 #include "about.h"
 #include "rooms/begin_room.h"
 #include "player.h"
+#include "messagedialog.h"
+#include "minigame1.h"
 
 namespace Ui {
 class NewMainWindow;
@@ -41,6 +43,7 @@ private slots:
 private:
     Ui::NewMainWindow *ui;
 	bool characterChosen = false;
+    Player* player;
 };
 
 #endif // NEWMAINWINDOW_H
