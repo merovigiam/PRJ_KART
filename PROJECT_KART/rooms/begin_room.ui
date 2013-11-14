@@ -374,6 +374,19 @@
     <string>Update</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="dreamReality">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>430</y>
+     <width>61</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reality</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

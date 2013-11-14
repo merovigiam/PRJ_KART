@@ -16,9 +16,11 @@ begin_room::begin_room(Player* player, QWidget *parent) :
     layer = 1; //change between 1 and 2
     roomCreation();
     currentRoom = rooms[RN_B];
-    MiniGame1 *mi = new MiniGame1(this);
+   /* MiniGame1 *mi = new MiniGame1(this);
     mi->exec();
-    delete mi;
+    delete mi;*/
+
+    setDarkGreyStyle();
 }
 
 void begin_room::roomCreation(){
@@ -88,7 +90,7 @@ void begin_room::loadImages(){
     images.clear();
     images.resize(I_MAX);
 
-    for(int j=0;j<I_MAX;j++) {
+    for(int j=0;j<3;j++) {
         images[j].resize(G_MAX_ROOMS);
         int counter=0;
         for(char i='b' ;i<= 't'; i++,counter++) {
@@ -110,6 +112,30 @@ void begin_room::loadImages(){
             }
         }
     }
+
+    images[DRAGON].resize(2);
+    images[QUEEN].resize(2);
+    images[SOLDIERA].resize(2);
+    images[SOLDIERB].resize(2);
+    images[SOLDIERC].resize(2);
+    images[PLAYERS].resize(4);
+
+
+    images[DRAGON][0] = QPixmap("C:/prj_kart/NPC/Dragon.png", 0, Qt::AutoColor);
+    images[DRAGON][1] = QPixmap("C:/prj_kart/NPC/Dragon2.png", 0, Qt::AutoColor);
+    images[QUEEN][0] = QPixmap("C:/prj_kart/NPC/Queen.png", 0, Qt::AutoColor);
+    images[QUEEN][1] = QPixmap("C:/prj_kart/NPC/Queen2.png", 0, Qt::AutoColor);
+    images[SOLDIERA][0] = QPixmap("C:/prj_kart/NPC/Soldier.png", 0, Qt::AutoColor);
+    images[SOLDIERA][1] = QPixmap("C:/prj_kart/NPC/Soldier2.png", 0, Qt::AutoColor);
+    images[SOLDIERB][0] = QPixmap("C:/prj_kart/NPC/SoldierB.jpg.jpg", 0, Qt::AutoColor);
+    images[SOLDIERB][1] = QPixmap("C:/prj_kart/NPC/SoldierB2.jpg", 0, Qt::AutoColor);
+    images[SOLDIERC][0] = QPixmap("C:/prj_kart/NPC/SoldierC.jpg", 0, Qt::AutoColor);
+    images[SOLDIERC][1] = QPixmap("C:/prj_kart/NPC/SoldierC2.jpg", 0, Qt::AutoColor);
+    images[PLAYERS][0] = QPixmap("C:/prj_kart/player/Melee2.png", 0, Qt::AutoColor);
+    images[PLAYERS][1] = QPixmap("C:/prj_kart/player/Mage2.png", 0, Qt::AutoColor);
+    images[PLAYERS][2] = QPixmap("C:/prj_kart/player/chris.jpg", 0, Qt::AutoColor);
+    images[PLAYERS][3] = QPixmap("C:/prj_kart/player/Archer2.png", 0, Qt::AutoColor);
+
 }
 
 void begin_room::on_pushButton_9_clicked()
@@ -227,3 +253,20 @@ void begin_room::on_pushButton_4_clicked()
     delete pl;
 }
 
+
+
+void begin_room::on_dreamReality_clicked()
+{
+    if(layer == BKG2) { //dream
+        ui->dreamReality->setText("Reality");
+        setDarkGreyStyle();
+        layer = BKG1;
+    }
+    else { //reality
+        setDarkGreyStyle();
+        layer = BKG2;
+        ui->dreamReality->setText("Dream");
+        setLightGreyStyle();
+    }
+    ui->currentRoomLabel->setPixmap(images[layer][currentRoom->getNumber()]);
+}

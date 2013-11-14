@@ -12,8 +12,9 @@
 #include "player.h"
 #include "item.h"
 #include "minigame1.h"
+#include <QStyleFactory>
 
-enum I_INDEX{MAP=0,BKG1=1,BKG2=2};
+enum I_INDEX{MAP=0,BKG1=1,BKG2=2,PLAYERS, DRAGON, QUEEN, SOLDIERA, SOLDIERB, SOLDIERC};
 
 using namespace std;
 namespace Ui {
@@ -49,6 +50,8 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void on_dreamReality_clicked();
+
 private:
     int index, index2;
     int layer;
@@ -66,8 +69,22 @@ private:
 
 
 
+    inline void setDefaultStyle() {
+        this->setStyleSheet("");
 
-    const int I_MAX = 3;
+    }
+
+    inline void setLightGreyStyle() {
+        this->setStyleSheet("background-color: lightgrey;");
+
+    }
+
+    inline void setDarkGreyStyle() {
+        this->setStyleSheet("background-color: #4C4C4C;");
+        //http://www.w3.org/TR/SVG/types.html#ColorKeywords
+    }
+
+    const int I_MAX = 9;
     const int G_MAX_ROOMS = 19;
 };
 

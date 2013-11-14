@@ -33,7 +33,7 @@
       <x>40</x>
       <y>120</y>
       <width>191</width>
-      <height>16</height>
+      <height>18</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -54,6 +54,9 @@
     </layout>
    </widget>
    <widget class="QPushButton" name="startButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>470</x>
@@ -188,7 +191,7 @@
      <rect>
       <x>40</x>
       <y>150</y>
-      <width>85</width>
+      <width>102</width>
       <height>81</height>
      </rect>
     </property>
