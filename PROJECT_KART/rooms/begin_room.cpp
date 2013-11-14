@@ -13,15 +13,24 @@ begin_room::begin_room(Player* player, QWidget *parent) :
     ui->minimapLabel->setPixmap(images[0][0]);
     //label->setPixmap(QPixmap("C:/Users/manolis/Desktop/data/test.png", 0, Qt::AutoColor));
 
-
-    void roomCreation();
+    layer = 1; //change between 1 and 2
+    roomCreation();
+    currentRoom = rooms[RN_B];
+    MiniGame1 *mi = new MiniGame1(this);
+    mi->exec();
+    delete mi;
 }
 
 void begin_room::roomCreation(){
-    rooms.resize(G_MAX_ROOMS);
+    //rooms.resize(G_MAX_ROOMS);
     char c = 'b';
+    string tryme = "";
+    char streng[10] = "b";
     for(int i=0;i<G_MAX_ROOMS;i++) {
-        rooms.push_back(new Room(""+c));
+        tryme = streng;
+        rooms.push_back(new Room(tryme));
+        streng[0]++;
+        rooms[i]->setNumber(i);
     }
 
     //                   (N, E, S, W)
@@ -34,10 +43,10 @@ void begin_room::roomCreation(){
     rooms[RN_H]->setExits(rooms[RN_L], rooms[RN_I], rooms[RN_G], rooms[RN_J]);
     rooms[RN_I]->setExits(NULL,NULL,NULL, rooms[RN_H]);
     rooms[RN_J]->setExits(rooms[RN_K], rooms[RN_H], NULL,NULL);
-    rooms[RN_K]->setExits(NULL,NULL, rooms[RN_J], rooms[RN_L]);
+    rooms[RN_K]->setExits(NULL,rooms[RN_L], rooms[RN_J], NULL);
     rooms[RN_L]->setExits(NULL, rooms[RN_M], rooms[RN_H], rooms[RN_K]);
     rooms[RN_M]->setExits(rooms[RN_N], NULL,NULL, rooms[RN_L]);
-    rooms[RN_N]->setExits(rooms[RN_P], rooms[RN_S], rooms[RN_M], rooms[RN_O]);
+    rooms[RN_N]->setExits(rooms[RN_P],rooms[RN_O] , rooms[RN_M], rooms[RN_S]);
     rooms[RN_O]->setExits(NULL,NULL,NULL, rooms[RN_N]);
     rooms[RN_P]->setExits(NULL, rooms[RN_Q], rooms[RN_N], rooms[RN_R]);
     rooms[RN_Q]->setExits(NULL,NULL,NULL, rooms[RN_P]);
@@ -45,6 +54,9 @@ void begin_room::roomCreation(){
     rooms[RN_S]->setExits(NULL, rooms[RN_N], rooms[RN_T], NULL);
     rooms[RN_T]->setExits(rooms[RN_S], NULL,NULL,NULL);
     //                   (N, E, S, W)
+
+
+
 }
 
 begin_room::~begin_room()
@@ -131,6 +143,8 @@ void begin_room::on_southButton_clicked()
 {
     //south
     go("south");
+
+
 }
 
 void begin_room::on_eastButton_clicked()
@@ -146,12 +160,15 @@ void begin_room::on_westButton_clicked()
 }
 
 string begin_room::go(string direction) {
+
     Room* nextRoom = currentRoom->nextRoom(direction);
     if (nextRoom == NULL)
         return("direction null");
     else
     {
         currentRoom = nextRoom;
+        ui->minimapLabel->setPixmap(images[MAP][currentRoom->getNumber()]);
+        ui->currentRoomLabel->setPixmap(images[layer][currentRoom->getNumber()]);
         return currentRoom->longDescription();
     }
 }

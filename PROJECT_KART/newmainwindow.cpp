@@ -22,7 +22,8 @@ void NewMainWindow::on_startButton_clicked()
     begin_room *begin  = new begin_room(player,this);
 
     begin->exec();
-     delete begin;
+
+    delete begin;
 }
 
 void NewMainWindow::on_pushButton_clicked()

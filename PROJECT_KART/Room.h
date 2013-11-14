@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include "inventory.h"
+
 using namespace std;
 using std::vector;
 
@@ -12,12 +13,20 @@ class Room {
 
 private:
 	string description;
-	map<string, Room*> exits;
+    map<string, Room*> exits;
 	string exitString();
      Inventory *itemsInRoom;
-
+    int number;
 
 public:
+    inline void setNumber(int number) {
+        this->number = number;
+    }
+
+    inline int getNumber() {
+        return this->number;
+    }
+
     int numberOfItems();
     Room(string description = "Empty boring room");
 

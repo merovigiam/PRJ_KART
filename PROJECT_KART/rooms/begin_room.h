@@ -11,6 +11,7 @@
 #include "inventory.h"
 #include "player.h"
 #include "item.h"
+#include "minigame1.h"
 
 enum I_INDEX{MAP=0,BKG1=1,BKG2=2};
 
@@ -29,6 +30,8 @@ public:
 
     void updateInventoryDisplay(Inventory *inv);
     
+
+    enum ROOM_NU { RN_B=0, RN_C=1, RN_D=2, RN_E=3, RN_F=4, RN_G=5, RN_H=6, RN_I=7, RN_J, RN_K, RN_L, RN_M, RN_N, RN_O, RN_P, RN_Q, RN_R, RN_S, RN_T };
 private slots:
     void on_pushButton_9_clicked();
 
@@ -48,6 +51,7 @@ private slots:
 
 private:
     int index, index2;
+    int layer;
     Ui::begin_room *ui;
     vector<Room *> rooms;
     Room* currentRoom;
@@ -62,7 +66,7 @@ private:
 
 
 
-    enum ROOM_NU { RN_B=0, RN_C=1, RN_D=2, RN_E, RN_F, RN_G, RN_H, RN_I, RN_J, RN_K, RN_L, RN_N, RN_M, RN_O, RN_P, RN_Q, RN_R, RN_S, RN_T };
+
     const int I_MAX = 3;
     const int G_MAX_ROOMS = 19;
 };
