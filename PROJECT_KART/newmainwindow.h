@@ -8,6 +8,7 @@
 
 #include "messagedialog.h"
 #include "minigame1.h"
+#include "minigame2.h"
 #include "player.h"
 
 namespace Ui {
@@ -40,6 +41,8 @@ private slots:
     void on_altButton_clicked();
     
     void on_exitButton_clicked();
+
+    void on_testMG_clicked();
 
 private:
     Ui::NewMainWindow *ui;

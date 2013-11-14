@@ -134,3 +134,10 @@ void NewMainWindow::on_exitButton_clicked()
 {
     this->close();
 }
+
+void NewMainWindow::on_testMG_clicked()
+{
+    Minigame2 *mg = new Minigame2(this) ;
+    mg->exec() ;
+    delete mg ;
+}
