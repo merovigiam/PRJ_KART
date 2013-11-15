@@ -7,6 +7,7 @@ NewMainWindow::NewMainWindow(QWidget *parent) :
     ui(new Ui::NewMainWindow)
 {
     ui->setupUi(this);
+     characterChosen= false;
 }
 
 NewMainWindow::~NewMainWindow()

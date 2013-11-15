@@ -38,6 +38,10 @@ public:
     string displayItem();
     int isItemInRoom(string inString);
     void removeItemFromRoom(int location);
+    inline Inventory* getInventory() {
+        return itemsInRoom;
+    }
+
     
 };
 

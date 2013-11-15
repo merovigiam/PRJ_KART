@@ -16,7 +16,7 @@
 #include <QStyleFactory>
 
 enum I_INDEX{MAP=0,BKG1=1,BKG2=2,PLAYERS, DRAGON, QUEEN, SOLDIERA, SOLDIERB, SOLDIERC};
-
+enum INTENTION {NOTHING, DROPITEM, GETITEM, EATFOOD, USESOMETHING};
 using namespace std;
 namespace Ui {
 class begin_room;
@@ -53,6 +53,10 @@ private slots:
 
     void on_dreamReality_clicked();
 
+    void on_pushButton_2_clicked();
+
+    void doIntentionalStuff();
+
 private:
     int index, index2;
     int layer;
@@ -61,14 +65,14 @@ private:
     Room* currentRoom;
     vector<vector<QPixmap> > images;
     Player* player;
+    INTENTION intention;
 
     void TESTchangePictures();
     void loadImages();
     void go(string direction);
     void roomCreation();
     void clearLayout(QLayout* layout, bool deleteWidgets);
-
-
+    void updateInventoryRoom(Inventory *inv);
 
     inline void setDefaultStyle() {
         this->setStyleSheet("");

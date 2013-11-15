@@ -11,15 +11,6 @@
 #include "inventory.h"
 #include "enemy.h"
 
-
-
-
-
-
-
-
-
-
 using namespace std;
 
 class Player
@@ -48,8 +39,8 @@ public:
 
 
 
-    inline const Inventory getInventory() {
-        return *inv;
+    inline Inventory* getInventory() {
+        return inv;
         //to return a pointer to a data i cant change
     }
 

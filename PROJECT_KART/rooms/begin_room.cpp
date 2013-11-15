@@ -23,6 +23,11 @@ begin_room::begin_room(Player* player, QWidget *parent) :
 
     this->setWindowTitle("KART - Reality");
     setDarkGreyStyle();
+
+    updateInventoryRoom(currentRoom->getInventory());
+    updateInventoryDisplay(player->getInventory());
+
+    intention= NOTHING;
 }
 
 void begin_room::roomCreation(){
@@ -39,7 +44,12 @@ void begin_room::roomCreation(){
 
     //                   (N, E, S, W)
     rooms[RN_B]->setExits(NULL, rooms[RN_C], NULL, NULL);
+    rooms[RN_B]->addItem(new Food("Apple",1,10));
+
+
     rooms[RN_C]->setExits(rooms[RN_F], rooms[RN_D], NULL, rooms[RN_B]);
+    rooms[RN_C]->addItem(new Food("Carrot",1,10));
+
     rooms[RN_D]->setExits(NULL, NULL, rooms[RN_E], rooms[RN_C]);
     rooms[RN_E]->setExits(rooms[RN_D], NULL, NULL, NULL);
     rooms[RN_F]->setExits(rooms[RN_G], NULL , rooms[RN_C], NULL);
@@ -55,6 +65,8 @@ void begin_room::roomCreation(){
     rooms[RN_P]->setExits(NULL, rooms[RN_Q], rooms[RN_N], rooms[RN_R]);
     rooms[RN_Q]->setExits(NULL,NULL,NULL, rooms[RN_P]);
     rooms[RN_R]->setExits(NULL, rooms[RN_P], NULL ,NULL);
+    rooms[RN_R]->addItem(new Item("Key"));
+
     rooms[RN_S]->setExits(NULL, rooms[RN_N], rooms[RN_T], NULL);
     rooms[RN_T]->setExits(rooms[RN_S], NULL,NULL,NULL);
     //                   (N, E, S, W)
@@ -142,16 +154,7 @@ void begin_room::loadImages(){
 
 void begin_room::on_pushButton_9_clicked()
 {
-    index2++;
-    if(index2 >= G_MAX_ROOMS) {
-        index2=0;
-        index++;
-    }
-    if(index >= I_MAX) {
-        index2=0;
-        index=0;
-    }
-    ui->minimapLabel->setPixmap(images[index][index2]);
+    intention = GETITEM;
 }
 
 void begin_room::on_pushButton_clicked()
@@ -198,6 +201,7 @@ void begin_room::go(string direction) {
         currentRoom = nextRoom;
         ui->minimapLabel->setPixmap(images[MAP][currentRoom->getNumber()]);
         ui->currentRoomLabel->setPixmap(images[layer][currentRoom->getNumber()]);
+        updateInventoryRoom(currentRoom->getInventory());
         char r = currentRoom->getNumber();
         switch(r) {
         case RN_B:
@@ -304,7 +308,7 @@ void begin_room::TESTchangePictures()
 
 void begin_room::on_pushButton_3_clicked()
 {
-    TESTchangePictures();
+    intention = DROPITEM;
 }
 
 void begin_room::clearLayout(QLayout* layout, bool deleteWidgets)
@@ -328,18 +332,30 @@ void begin_room::updateInventoryDisplay(Inventory* inv){
     clearLayout(ui->inventoryDisplay->layout(),true);
     size = inv->getSizeInv();
     for(int i=0; i < size ; i++) {
-        ui->inventoryDisplay->addWidget(new QPushButton(inv->getItemAt(i)->getDescription().c_str(),this));
+        QPushButton *newer = new QPushButton(inv->getItemAt(i)->getDescription().c_str(),this);
+        connect(newer, SIGNAL(clicked()),this,SLOT(doIntentionalStuff()));
+        ui->inventoryDisplay->addWidget(newer);
+    }
+}
+
+void begin_room::updateInventoryRoom(Inventory *inv){
+    int size = ui->inventoryDisplay->count();
+
+    clearLayout(ui->inventoryRoom->layout(),true);
+    size = inv->getSizeInv();
+    for(int i=0; i < size ; i++) {
+        QPushButton *newer = new QPushButton(inv->getItemAt(i)->getDescription().c_str(),this);
+        connect(newer, SIGNAL(clicked()),this,SLOT(doIntentionalStuff()));
+        ui->inventoryRoom->addWidget(newer);
+
+
+
     }
 }
 
 void begin_room::on_pushButton_4_clicked()
 {
-    Inventory* pl = new Inventory();
-    pl->addItem(new Item("x"));
-    pl->addItem(new Item("y"));
-    pl->addItem(new Item("z"));
-    updateInventoryDisplay(pl);
-    delete pl;
+    intention = USESOMETHING;
 }
 
 
@@ -360,4 +376,14 @@ void begin_room::on_dreamReality_clicked()
         this->setWindowTitle("KART - Reality");
     }
     ui->currentRoomLabel->setPixmap(images[layer][currentRoom->getNumber()]);
+}
+
+void begin_room::on_pushButton_2_clicked()
+{
+    intention = EATFOOD;
+}
+
+void begin_room::doIntentionalStuff() {
+    QMessageBox::information(NULL, "hi!", "hi!");
+
 }
