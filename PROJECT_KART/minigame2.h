@@ -15,6 +15,9 @@ class Minigame2 : public QDialog
 public:
     explicit Minigame2(QWidget *parent = 0);
     ~Minigame2();
+    inline bool getDone() {
+        return done;
+    }
 
 private slots:
 
@@ -30,6 +33,7 @@ private slots:
 
 private:
     Ui::Minigame2 *ui;
+    bool done;
 };
 
 #endif // MINIGAME2_H

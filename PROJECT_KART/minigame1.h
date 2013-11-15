@@ -18,6 +18,9 @@ class MiniGame1 : public QDialog
 public:
     explicit MiniGame1(QWidget *parent = 0);
     ~MiniGame1();
+    inline bool getDone() {
+        return done;
+    }
 
 private slots:
     void on_horizontalScrollBar_2_rangeChanged(int min, int max);
@@ -32,7 +35,7 @@ private:
     Ui::MiniGame1 *ui;
     vector<QPushButton*> buttons;
 
-
+    bool done;
     bool checkCollision(int r1x1,int r1x2,int r1y1,int r1y2,int r2x1,int r2x2,int r2y1,int r2y2);
     bool checkAllColisions(int intentionX,int intentionY);
     bool checkFinish();

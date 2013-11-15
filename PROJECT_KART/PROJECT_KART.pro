@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     messagedialog.cpp \
     Room.cpp \
     fight.cpp \
-    minigame1.cpp
+    minigame1.cpp \
+    minigame2.cpp
     minigame1.cpp
 
 HEADERS  += player.h \
@@ -42,7 +43,8 @@ HEADERS  += player.h \
     messagedialog.h \
     Room.h \
     fight.h \
-    minigame1.h
+    minigame1.h \
+    minigame2.h
     minigame1.h
 
 
@@ -51,7 +53,8 @@ FORMS    += about.ui \
     newmainwindow.ui \
     messagedialog.ui \
     fight.ui \
-    minigame1.ui
+    minigame1.ui \
+    minigame2.ui
     minigame1.ui
 
 OTHER_FILES += \

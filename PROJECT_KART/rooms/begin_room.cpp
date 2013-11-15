@@ -11,6 +11,7 @@ begin_room::begin_room(Player* player, QWidget *parent) :
     ui->setupUi(this);
     loadImages();
     ui->minimapLabel->setPixmap(images[0][0]);
+    ui->currentRoomLabel->setPixmap(images[1][0]);
     //label->setPixmap(QPixmap("C:/Users/manolis/Desktop/data/test.png", 0, Qt::AutoColor));
 
     layer = 1; //change between 1 and 2
@@ -20,6 +21,7 @@ begin_room::begin_room(Player* player, QWidget *parent) :
     mi->exec();
     delete mi;*/
 
+    this->setWindowTitle("KART - Reality");
     setDarkGreyStyle();
 }
 
@@ -127,7 +129,7 @@ void begin_room::loadImages(){
     images[QUEEN][1] = QPixmap("C:/prj_kart/NPC/Queen2.png", 0, Qt::AutoColor);
     images[SOLDIERA][0] = QPixmap("C:/prj_kart/NPC/Soldier.png", 0, Qt::AutoColor);
     images[SOLDIERA][1] = QPixmap("C:/prj_kart/NPC/Soldier2.png", 0, Qt::AutoColor);
-    images[SOLDIERB][0] = QPixmap("C:/prj_kart/NPC/SoldierB.jpg.jpg", 0, Qt::AutoColor);
+    images[SOLDIERB][0] = QPixmap("C:/prj_kart/NPC/SoldierB.jpg", 0, Qt::AutoColor);
     images[SOLDIERB][1] = QPixmap("C:/prj_kart/NPC/SoldierB2.jpg", 0, Qt::AutoColor);
     images[SOLDIERC][0] = QPixmap("C:/prj_kart/NPC/SoldierC.jpg", 0, Qt::AutoColor);
     images[SOLDIERC][1] = QPixmap("C:/prj_kart/NPC/SoldierC2.jpg", 0, Qt::AutoColor);
@@ -261,12 +263,14 @@ void begin_room::on_dreamReality_clicked()
         ui->dreamReality->setText("Reality");
         setDarkGreyStyle();
         layer = BKG1;
+        this->setWindowTitle("KART - Dream");
     }
     else { //reality
         setDarkGreyStyle();
         layer = BKG2;
         ui->dreamReality->setText("Dream");
         setLightGreyStyle();
+        this->setWindowTitle("KART - Reality");
     }
     ui->currentRoomLabel->setPixmap(images[layer][currentRoom->getNumber()]);
 }

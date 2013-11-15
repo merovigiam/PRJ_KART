@@ -22,6 +22,7 @@ MiniGame1::MiniGame1(QWidget *parent) :
     buttons.push_back(ui->pushButton_14);
     buttons.push_back(ui->pushButton_15);
     buttons.push_back(ui->pushButton_16);
+    done = false;
 
     QMessageBox::information(NULL, "Instructions", "Use the scroll bars to move yourself to the Exit. You are allowed to teleport between the boxes, but try to avoid them.");
 }
@@ -51,6 +52,7 @@ void MiniGame1::on_horizontalScroll_sliderMoved(int position)
         ui->me->setGeometry(anew);
         if(checkFinish()) {
             QMessageBox::information(NULL, "Congratulations!", "You successfully finished the mini game. you may proceed now.");
+            done = true;
             this->close();
         }
     }
@@ -64,6 +66,7 @@ void MiniGame1::on_verticalScroll_sliderMoved(int position)
         ui->me->setGeometry(anew);
         if(checkFinish()) {
             QMessageBox::information(NULL, "Congratulations!", "You successfully finished the mini game. you may proceed now.");
+            done = true;
             this->close();
         }
     }
