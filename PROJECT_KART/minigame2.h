@@ -17,11 +17,6 @@ public:
     ~Minigame2();
 
 private slots:
-    void on_horizontalSlider_2_sliderReleased();
-
-    void on_horizontalSlider_sliderReleased();
-
-    void on_slider1_sliderReleased();
 
     void on_slider1_valueChanged(int value);
 
