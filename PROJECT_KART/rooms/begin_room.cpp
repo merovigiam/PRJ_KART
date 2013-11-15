@@ -187,18 +187,105 @@ void begin_room::on_westButton_clicked()
     go("west");
 }
 
-string begin_room::go(string direction) {
+void begin_room::go(string direction) {
 
     Room* nextRoom = currentRoom->nextRoom(direction);
-    if (nextRoom == NULL)
-        return("direction null");
+    if (nextRoom == NULL) {
+
+    }
     else
     {
         currentRoom = nextRoom;
         ui->minimapLabel->setPixmap(images[MAP][currentRoom->getNumber()]);
         ui->currentRoomLabel->setPixmap(images[layer][currentRoom->getNumber()]);
-        return currentRoom->longDescription();
+        char r = currentRoom->getNumber();
+        switch(r) {
+        case RN_B:
+
+            break;
+        case RN_C:
+
+            break;
+        case RN_D:
+
+            break;
+        case RN_E:
+
+            break;
+        case RN_F:
+            doMiniGame(1);
+            break;
+        case RN_G:
+
+            break;
+        case RN_H:
+
+            break;
+        case RN_I:
+
+            break;
+        case RN_J:
+
+            break;
+        case RN_K:
+
+            break;
+        case RN_L:
+
+            break;
+        case RN_M:
+            doMiniGame(0);
+            break;
+        case RN_N:
+            doMiniGame(0);
+            break;
+        case RN_O:
+
+            break;
+        case RN_P:
+
+            break;
+        case RN_Q:
+
+            break;
+        case RN_R:
+
+            break;
+        case RN_S:
+
+            break;
+        case RN_T:
+
+            break;
+        }
     }
+}
+
+void begin_room::doMiniGame(int witch){
+    if(witch == 0) {
+        MiniGame1 * mini = new MiniGame1(this);
+        mini->exec();
+        while(!mini->getDone()) {
+            QMessageBox::information(NULL, "Invelid Move!", "You must complete the minigame to proceed!");
+            delete mini;
+            mini = new MiniGame1(this);
+            mini->exec();
+        }
+        delete mini;
+    }
+    else {
+        Minigame2 * mini = new Minigame2(this);
+        mini->exec();
+        while(!mini->getDone()) {
+            QMessageBox::information(NULL, "Invelid Move!", "You must complete the minigame to proceed!");
+            delete mini;
+            mini = new Minigame2(this);
+            mini->exec();
+        }
+        delete mini;
+
+    }
+
 }
 
 void begin_room::TESTchangePictures()

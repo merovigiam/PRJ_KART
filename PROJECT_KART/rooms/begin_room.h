@@ -12,6 +12,7 @@
 #include "player.h"
 #include "item.h"
 #include "minigame1.h"
+#include "minigame2.h"
 #include <QStyleFactory>
 
 enum I_INDEX{MAP=0,BKG1=1,BKG2=2,PLAYERS, DRAGON, QUEEN, SOLDIERA, SOLDIERB, SOLDIERC};
@@ -31,7 +32,7 @@ public:
 
     void updateInventoryDisplay(Inventory *inv);
     
-
+    void doMiniGame(int wich);
     enum ROOM_NU { RN_B=0, RN_C=1, RN_D=2, RN_E=3, RN_F=4, RN_G=5, RN_H=6, RN_I=7, RN_J, RN_K, RN_L, RN_M, RN_N, RN_O, RN_P, RN_Q, RN_R, RN_S, RN_T };
 private slots:
     void on_pushButton_9_clicked();
@@ -63,7 +64,7 @@ private:
 
     void TESTchangePictures();
     void loadImages();
-    string go(string direction);
+    void go(string direction);
     void roomCreation();
     void clearLayout(QLayout* layout, bool deleteWidgets);
 
