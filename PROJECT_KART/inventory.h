@@ -14,15 +14,11 @@ private:
 public:
     Inventory();
 
-    inline void addItem(Item &item) {
-        Item *temp ;
-        *temp = item ;
-        inv.push_back(temp);
-    }
+
 
     inline void addItem(Item *item) {
         inv.push_back(item);
-        delete item;
+        //delete item;
     }
 
     inline const vector<Item*> getInventoryListArray() {
