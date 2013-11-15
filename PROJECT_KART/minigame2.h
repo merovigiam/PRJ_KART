@@ -34,6 +34,7 @@ private slots:
 private:
     Ui::Minigame2 *ui;
     bool done;
+    int targetLock1, targetLock2, targetLock3, targetLock4;
 };
 
 #endif // MINIGAME2_H

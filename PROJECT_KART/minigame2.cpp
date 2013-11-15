@@ -19,6 +19,10 @@ Minigame2::Minigame2(QWidget *parent) :
     ui->checkBox_4->setEnabled(false);
     done = false;
     QMessageBox::information(NULL, "Help", "To continue, you must unlock this door.Move the sliders to the right position and try to open.");
+    targetLock1 = rand()%10+1;
+    targetLock2 = rand()%10+1;
+    targetLock3= rand()%10+1;
+    targetLock4= rand()%10+1;
 }
 
 Minigame2::~Minigame2()
@@ -28,7 +32,7 @@ Minigame2::~Minigame2()
 
 void Minigame2::on_slider1_valueChanged(int value)
 {
-    if(ui->slider1->value() == 5)
+    if(value == targetLock1)
         ui->checkBox->setChecked(true) ;
     else
         ui->checkBox->setChecked(false) ;
@@ -37,7 +41,7 @@ void Minigame2::on_slider1_valueChanged(int value)
 
 void Minigame2::on_slider2_valueChanged(int value)
 {
-    if(ui->slider2->value() == 8)
+    if(value == targetLock2)
         ui->checkBox_2->setChecked(true) ;
     else
         ui->checkBox_2->setChecked(false) ;
@@ -45,7 +49,7 @@ void Minigame2::on_slider2_valueChanged(int value)
 
 void Minigame2::on_slider3_valueChanged(int value)
 {
-    if(ui->slider3->value() == 3)
+    if(value == targetLock3)
         ui->checkBox_3->setChecked(true) ;
     else
         ui->checkBox_3->setChecked(false) ;
@@ -53,7 +57,7 @@ void Minigame2::on_slider3_valueChanged(int value)
 
 void Minigame2::on_slider4_valueChanged(int value)
 {
-    if(ui->slider4->value() == 7)
+    if(value == targetLock4)
         ui->checkBox_4->setChecked(true) ;
     else
         ui->checkBox_4->setChecked(false) ;
